@@ -58,7 +58,7 @@ router.post('/adduser', function (req, res) {
   }
 })
 
-router.get('/login', function (req, res) {
+router.post('/login', function (req, res) {
   //FLogger.log("这是一条日志测试打印 none not paramters！", 111, "uuuuuuuuu", null, {jj: 188, name: "hello"});
   //FLogger.warn("warn", "这是一条日志测试打印 ",123);
   if(req.body.username!=null&&req.body.password!=null){
@@ -71,6 +71,7 @@ router.get('/login', function (req, res) {
   }else{
     res.send("请传入参数")
   }
+  res.send("success")
 })
 
 
