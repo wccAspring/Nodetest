@@ -67,6 +67,7 @@ router.post('/login', function (req, res) {
             ('`+ req.body.description + `','` + req.body.role + `');`, [], function (results, rows) {
         //返回前端数据
         res.send(results)
+        
         });
   }else{
     res.send("请传入参数")
